@@ -3,6 +3,7 @@ import { Text, View, TextInput, TouchableOpacity, Image, } from "react-native";
 //import { Product } from "../src/components/Product";
 import { styles } from "./styles";
 
+
 export default function Home(){
     const [product, setProducts] = useState<string[]>([]);
     const [productName, setProductName] = useState("");
@@ -17,7 +18,21 @@ export default function Home(){
 
             </View>
 
-            <View style={styles.bottom}></View>
+            <View style={styles.bottom}>
+                <View style={styles.infoContainer}>
+                    <View style={styles.infoContainerItem}>
+                        <Text style={styles.product}>Produtos</Text>
+                        <Text style={styles.counter}>0</Text>
+                    </View>
+
+                    <View style={styles.infoContainerItem}>
+                        <Text style={styles.finished}>Finalizados</Text>
+                        <Text style={styles.counter}>0</Text>
+                    </View>
+                    
+                </View>
+                
+            </View>
             <View style={styles.form}>
                 <TextInput
                 style={styles.input}
@@ -44,4 +59,3 @@ export default function Home(){
     )
 
 }
-
